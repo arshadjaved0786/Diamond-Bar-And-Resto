@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Diamond Restro & Bar</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0d324d, #7f5a83);
+      color: #f0f0f0;
+    }
+    header {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #f0f0f0;
+      padding: 20px 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      animation: headerFadeZoom 1.5s ease forwards;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 8px #000a12;
+      animation: glowPulse 3s ease-in-out infinite alternate;
+    }
+
+    header img {
+      width: 200px;
+      height: auto;
+      margin-top: 10px;
+      filter: drop-shadow(2px 2px 4px #000a12);
+      animation: glowPulse 3s ease-in-out infinite alternate;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    nav a {
+      color: #cce7ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00ffd1;
+      transform: scale(1.1);
+      text-shadow: 0 0 8px #00ffd1;
+    }
+
+    section {
+      background-color: rgba(255, 255, 255, 0.12);
+      padding: 40px;
+      max-width: 1000px;
+      margin: 30px auto;
+      color: #e6e6e6;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      line-height: 1.8;
+      perspective: 800px; /* Needed for 3D effect */
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      text-align: center;
+      color: #69e6f2;
+      text-shadow: 0 0 6px #3bb4c1;
+    }
+
+    .animated-3d-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #69e6f2;
+  display: block;          /* change here from inline-block to block */
+  perspective: 500px;
+  animation: rotate3dText 6s linear infinite;
+  transform-style: preserve-3d;
+  text-shadow:
+    1px 1px 0 #0a4c57,
+    2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0 auto 25px;     /* update margin to center horizontally and keep bottom margin */
+  text-align: center;      /* add this line to center text inside */
+}
+
+    }
+
+    /* 3D animated paragraphs */
+    section p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 3px #003743;
+      opacity: 0;
+      transform-style: preserve-3d;
+      transform-origin: center bottom;
+      animation: fadeRotate3d 1.2s ease forwards;
+      animation-delay: var(--delay);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #cce7ff;
+      box-shadow: inset 0 0 10px #00ffd1;
+    }
+
+    .flip-card {
+      width: 150px;
+      height: 110px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotateCard 8s infinite linear;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 8px #00ffd1;
+    }
+
+    .flip-card-front img,
+    .flip-card-back img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Animations */
+    @keyframes fadeRotate3d {
+      0% {
+        opacity: 0;
+        transform: rotateX(90deg) translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: rotateX(0deg) translateY(0);
+      }
+    }
+
+    @keyframes rotateCard {
+      0% {
+        transform: rotateY(0deg);
+      }
+
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+
+    @keyframes rotate3dText {
+      0% {
+        transform: rotateX(0deg) rotateY(0deg);
+      }
+
+      25% {
+        transform: rotateX(10deg) rotateY(20deg);
+      }
+
+      50% {
+        transform: rotateX(0deg) rotateY(40deg);
+      }
+
+      75% {
+        transform: rotateX(-10deg) rotateY(20deg);
+      }
+
+      100% {
+        transform: rotateX(0deg) rotateY(0deg);
+      }
+    }
+
+    /* New animations for header */
+    @keyframes headerFadeZoom {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes glowPulse {
+      0% {
+        text-shadow: 0 0 6px #00ffd1, 0 0 10px #00ffd1, 0 0 20px #00ffd1;
+        filter: drop-shadow(0 0 6px #00ffd1);
+      }
+
+      100% {
+        text-shadow: 0 0 20px #00fff3, 0 0 30px #00fff3, 0 0 40px #00fff3;
+        filter: drop-shadow(0 0 12px #00fff3);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Login check -->
+  <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <header>
+    <h1>DIAMOND RESTRO AND BAR</h1>
+    <img src="https://shorturl.at/4Stns" alt="Diamond Logo" />
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html" style="color: #00ffd1; font-weight: bold;">About Us</a> |
+    <a href="Menu.html">Menu</a> |
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <section>
+    <h2 class="animated-3d-text">DIAMOND RESTRO AND BAR</h2>
+
+    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+      <p style="flex: 1; min-width: 250px; --delay: 0.2s;">
+        At <strong>Diamond Restro & Bar</strong>, we believe dining is more than just a meal — it's an experience.
+        Established in 2023, our mission has always been to provide a warm, inviting space where people can connect over
+        delicious food, refreshing drinks, and unforgettable moments.
+      </p>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://shorturl.at/4Stns" alt="Logo Front" />
+          </div>
+          <div class="flip-card-back">
+            <img src="https://shorturl.at/4Stns" alt="Logo Back" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="--delay: 0.5s;">
+      Our menu blends the best of traditional Italian cuisine with global flavors, offering something for everyone —
+      from handcrafted wood-fired pizzas to gourmet burgers, exotic cocktails to comfort desserts. Whether you're here
+      for a family dinner, a casual hangout with friends, or a late-night drink, Diamond Restro & Bar welcomes you with
+      open arms.
+    </p>
+    <p style="--delay: 0.8s;">
+      We take pride in using fresh, high-quality ingredients and delivering top-tier service in a stylish and cozy
+      atmosphere. Every dish, every drink, and every detail is curated with passion — because you deserve nothing but
+      the best.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Diamond Restro & Bar. All Rights Reserved.
+  </footer>
+</body>
+
+</html>  
