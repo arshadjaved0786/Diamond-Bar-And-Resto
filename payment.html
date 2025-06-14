@@ -5,28 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Payment Options - Diamond Restro & Bar</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #0d324d, #7f5a83);
+      background: linear-gradient(135deg, #ffffff, #000000);
       color: #e0e0e0;
-    }
-
-    header {
-      background-color: rgba(255, 255, 255, 0.1);
+      overflow-x: hidden;
+   }
+     header {
+      background: linear-gradient(135deg, #ffffff, #000000);
       color: #f0f0f0;
-      padding: 20px 10px;
+      padding: 15px 10px;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 3px rgba(0, 0, 0, 0.3);
       animation: headerFadeZoom 1.5s ease forwards;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-      text-shadow: 2px 2px 8px #000a12;
-      animation: glowPulse 3s ease-in-out infinite alternate;
+   header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            text-shadow: 2px 2px 8px #000a12;
+            animation: glowPulse 3s ease-in-out infinite alternate;
+
     }
 
     header img {
@@ -52,8 +53,8 @@
     }
 
     nav a:hover {
-      color: #00ffd1;
-      text-shadow: 0 0 8px #00ffd1;
+      color: #000000;
+      text-shadow: 0 0 8px #fdffff;
     }
 
     .container {
@@ -62,7 +63,7 @@
       background-color: rgba(255, 255, 255, 0.05);
       padding: 30px;
       border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 255, 209, 0.3);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       animation: floatCard 4s ease-in-out infinite alternate;
     }
 
@@ -70,7 +71,7 @@
       text-align: center;
       margin-bottom: 25px;
       font-size: 2rem;
-      text-shadow: 0 0 8px #3bb4c1;
+      text-shadow: 0 0 3px #000000;
     }
 
     ul {
@@ -83,7 +84,7 @@
       margin: 10px 0;
       padding: 15px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 255, 209, 0.2);
+      box-shadow: 0 2px 3px rgba(0, 255, 209, 0.2);
       transform: translateY(20px);
       opacity: 0;
       animation: fadeInUp 0.5s forwards;
@@ -97,7 +98,7 @@
     li:nth-child(6) { animation-delay: 1.2s; }
 
     a {
-      color: #00ffd1;
+      color: #000000;
       text-decoration: none;
     }
 
@@ -107,21 +108,21 @@
 
     .total-amount {
       font-size: 1.8rem;
-      font-weight: bold;
-      color: #00ffd1;
-      margin-bottom: 30px;
+      font-weight: bold 10px;
+      color: #000000;
+      margin-bottom: 10px;
       text-align: center;
-      text-shadow: 0 0 10px #00ffd1;
+      text-shadow: 0 0 3px #000000;
     }
 
     @keyframes glowPulse {
       0% {
-        text-shadow: 0 0 6px #00ffd1, 0 0 10px #00ffd1, 0 0 20px #00ffd1;
-        filter: drop-shadow(0 0 6px #00ffd1);
+        text-shadow: 0 0 6px #000000, 0 0 10px #000000, 0 0 20px #000000;
+        filter: drop-shadow(0 0 6px #000000);
       }
       100% {
-        text-shadow: 0 0 20px #00fff3, 0 0 30px #00fff3, 0 0 40px #00fff3;
-        filter: drop-shadow(0 0 12px #00fff3);
+        text-shadow: 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000;
+        filter: drop-shadow(0 0 12px #000000);
       }
     }
 
@@ -161,7 +162,7 @@
       width: 250px;
       max-width: 100%;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,255,209,0.4);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     .qr-section p {
@@ -175,15 +176,14 @@
       font-weight: bold;
       border: none;
       border-radius: 8px;
-      background-color: #00ffd1;
-      color: #000;
+      color: #000000;
       cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,255,209,0.5);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
       transition: background-color 0.3s ease;
     }
 
     .qr-section button:hover {
-      background-color: #00e6bb;
+      background-color: #f6f6f6;
     }
 
     #orderConfirmation {
@@ -195,9 +195,17 @@
 </head>
 <body>
 
-  <header>
-    <h1>DIAMOND RESTRO AND BAR</h1>
-    <img src="https://shorturl.at/4Stns" alt="Diamond Logo" />
+  <header style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
+    <!-- Left: Logo -->
+    <div style="flex: 1;">
+        <img src="https://shorturl.at/4Stns" alt="Diamond Logo" style="height: 160px; width: 160px; border-radius: 50%; object-fit: cover;">
+    </div>
+    <!-- Center: Heading -->
+    <div style="flex: 1; text-align: center;">
+        <h1 style="margin: 0; white-space: nowrap; font-size: 55px;">DIAMOND RESTRO AND BAR</h1>
+    </div>
+    <!-- Right: Empty to balance layout -->
+    <div style="flex: 1;"></div>
   </header>
 
   <nav>
