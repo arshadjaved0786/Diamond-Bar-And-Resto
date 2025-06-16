@@ -241,18 +241,20 @@
 
   <script>
     const menuItems = [
-      { name: "Tea", half: 10, full: 20, img: "https://cdn.pixabay.com/photo/2013/07/12/18/09/tea-153067_1280.png" },
-      { name: "Kulhad Tea", half: 20, full: 30, img: "https://media.istockphoto.com/id/1128172520/photo/tea-served-in-a-clay-cup-with-background.jpg" },
-      { name: "Hot Coffee", half: 30, full: 50, img: "https://media.istockphoto.com/id/1358132613/photo/refreshing-hot-cup-of-coffee-at-a-cafe.jpg" },
-      { name: "Cold Coffee", half: 40, full: 60, img: "https://images.immediate.co.uk/production/volatile/sites/30/2016/06/IcedCoffeenew-8415cf7.jpg" },
-      { name: "Oreo Shake", half: 60, full: 90, img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRYO8ohbxe9DZGn2xiTF6ZiKJwzbcrpf8M3JW1du3kcVa2ccV2CuEgQ0IXgZeY08gpP7ZLaHe2gA9ChTkAvwaoRkyVit7hYtdsqTHT5X6CJ" },
-      { name: "KitKat Shake", half: 60, full: 90, img: "https://content.instructables.com/FW0/CRAG/K06ZDTDL/FW0CRAGK06ZDTDL.jpg" },
-      { name: "Mint Shake", half: 50, full: 80, img: "https://content.instructables.com/FQC/NH0D/HUIS7EQE/FQCNH0DHUIS7EQE.jpg" },
-      { name: "Watermelon Shake", half: 50, full: 80, img: "https://images.immediate.co.uk/production/volatile/sites/30/2021/04/Watermelon-Smoothie-99503bb.jpg" },
-      { name: "Mango Shake", half: 60, full: 90, img: "https://www.vegrecipesofindia.com/wp-content/uploads/2021/04/mango-milkshake-1.jpg" },
-      { name: "Lassi", half: 30, full: 50, img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Salt_lassi.jpg/330px-Salt_lassi.jpg" }
-    ];
+       { name: "Tea", half: 10, full: 20, img: "https://cdn.pixabay.com/photo/2013/07/12/18/09/tea-153067_1280.png" },
+  { name: "Kulhad Tea", half: 20, full: 30, img: "https://media.istockphoto.com/id/1128172520/photo/tea-served-in-a-clay-cup-with-background.jpg?s=612x612&w=0&k=20&c=4omaTXOGBUsc6-BWLJlz26E22c5PkV7Yh-v0Mf-xHQw=" },
+  { name: "Hot Coffee", half: 30, full: 50, img: "https://media.istockphoto.com/id/1358132613/photo/refreshing-hot-cup-of-coffee-at-a-cafe.jpg?s=612x612&w=0&k=20&c=ObwIF28Vt3k93Nch9U4QYUdOwMA_eiMwVVCvKbypnNc=" },
+  { name: "Cold Coffee", half: 40, full: 60, img: "https://images.immediate.co.uk/production/volatile/sites/30/2016/06/IcedCoffeenew-8415cf7.jpg?quality=90&webp=true&resize=572,519" },
+  { name: "Oreo Shake", half: 60, full: 90, img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRYO8ohbxe9DZGn2xiTF6ZiKJwzbcrpf8M3JW1du3kcVa2ccV2CuEgQ0IXgZeY08gpP7ZLaHe2gA9ChTkAvwaoRkyVit7hYtdsqTHT5X6CJ" },
+  { name: "KitKat Shake", half: 60, full: 90, img: "https://content.instructables.com/FW0/CRAG/K06ZDTDL/FW0CRAGK06ZDTDL.jpg?auto=webp&frame=1&crop=3:2&width=600&height=1024&fit=bounds&md=MjAxOS0wOS0wNiAxMzowMTo0My4w" },
+  { name: "Mint Shake", half: 50, full: 80, img: "https://content.instructables.com/FQC/NH0D/HUIS7EQE/FQCNH0DHUIS7EQE.jpg?auto=webp&crop=1.2%3A1&frame=1&width=360" },
+  { name: "Watermelon Shake", half: 50, full: 80, img: "https://images.immediate.co.uk/production/volatile/sites/30/2021/04/Watermelon-Smoothie-99503bb.jpg?quality=90&webp=true&resize=600,545" },
+  { name: "Mango Shake", half: 60, full: 90, img: "https://www.vegrecipesofindia.com/wp-content/uploads/2021/04/mango-milkshake-1.jpg" },
+  { name: "Pineapple Shake", half: 60, full: 90, img: "https://www.yummytummyaarthi.com/wp-content/uploads/2014/06/1.jpg" },
 
+  { name: "Lassi", half: 30, full: 50, img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Salt_lassi.jpg/330px-Salt_lassi.jpg" },
+  { name: "Kheer", half: 40, full: 70, img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Kheer.jpg/500px-Kheer.jpg" }
+];
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
