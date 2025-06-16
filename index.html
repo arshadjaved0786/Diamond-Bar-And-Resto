@@ -23,9 +23,27 @@
             background: linear-gradient(135deg, #ffffff, #000000);
             color: #f0f0f0;
             padding: 20px 10px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             animation: headerFadeZoom 1.5s ease forwards;
+        }
+
+        .logout-btn {
+            background-color: #ff4d4d;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .logout-btn:hover {
+            background-color: #ff1a1a;
         }
 
         header h1 {
@@ -36,9 +54,10 @@
         }
 
         header img {
-            width: 200px;
-            height: auto;
-            margin-top: 10px;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
             filter: drop-shadow(2px 2px 4px #000a12);
             animation: glowPulse 3s ease-in-out infinite alternate;
         }
@@ -64,20 +83,6 @@
             text-shadow: 0 0 8px #000000;
         }
 
-        .body-logo {
-            display: flex;
-            justify-content: center;
-            margin: 30px auto 20px;
-            animation: glowPulse 3s infinite ease-in-out alternate;
-        }
-
-        .body-logo img {
-            width: 180px;
-            height: auto;
-            border-radius: 12px;
-            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
-        }
-
         section {
             padding: 40px;
             max-width: 1000px;
@@ -93,38 +98,10 @@
             color: #000000;
         }
 
-        .menu-category {
-            font-size: 1.5rem;
-            margin: 20px 0 10px;
-            perspective: 800px;
-        }
-
-        .menu-list {
-            display: grid;
-            gap: 10px;
-            padding-left: 20px;
-            transform-style: preserve-3d;
-        }
-
-        .menu-list li {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px 15px;
-            border-radius: 8px;
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
-        }
-
-        .menu-list li:hover {
-            transform: rotateY(15deg) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
         .animated-paragraph {
             margin-top: 30px;
             font-size: 1.2rem;
             text-align: center;
-            perspective: 1000px;
-            transform-style: preserve-3d;
             animation: floatIn3D 3s ease forwards;
         }
 
@@ -168,10 +145,11 @@
 
 <body>
 
-<header style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
-    <!-- Left: Logo -->
-    <div style="flex: 1;">
-        <img src="https://shorturl.at/4Stns" alt="Diamond Logo" style="height: 160px; width: 160px; border-radius: 50%; object-fit: cover;">
+<header>
+    <!-- Left: Logout + Logo -->
+    <div style="flex: 1; display: flex; align-items: center;">
+        <button class="logout-btn" onclick="logout()">Logout</button>
+        <img src="https://shorturl.at/4Stns" alt="Diamond Logo">
     </div>
 
     <!-- Center: Heading -->
@@ -186,21 +164,19 @@
 <nav>
     <a href="index.html">Home</a> |
     <a href="Menu.html">Menu</a> |
-    <a href="contact.html">Contact Us</a> |
-    <a href="#" onclick="logout()">Logout</a>
+    <a href="contact.html">Contact Us</a>
 </nav>
 
 <section id="contentSection">
-    <h2 class="animated-3d-text" style="font-size: 30px; font-weight: bold; text-align: center;">WELCOME TO DIAMOND RESTRO & BAR</h2>
-    WELCOME TO DIAMOND RESTRO & BAR
-    At Diamond Restro & Bar, we bring sparkle to every plate and pour. Since opening in 2023, we’ve been serving a perfect fusion of gourmet dining and vibrant bar vibes.
-
-    Whether you're here for a casual evening out, a romantic dinner, or a lively night with friends, we offer an atmosphere that's both sophisticated and welcoming. Our chefs craft each dish with precision and flair, blending bold flavors, fresh ingredients, and artistic presentation. From sizzling appetizers to decadent desserts, every bite is a gem.
-
-    Our bar is the heart of the energy—shaking, stirring, and pouring signature cocktails, premium spirits, and curated wines. Sip under ambient lighting, enjoy live music or DJ nights, and let your evenings shimmer with unforgettable moments.
-
+    <h2 class="animated-3d-text" style="font-size: 30px; font-weight: bold;">WELCOME TO DIAMOND RESTRO & BAR</h2>
     <p>
-        At <strong>Diamond Restro & Bar</strong>
+        At Diamond Restro & Bar, we bring sparkle to every plate and pour. Since opening in 2023, we’ve been serving a perfect fusion of gourmet dining and vibrant bar vibes.
+    </p>
+    <p>
+        Whether you're here for a casual evening out, a romantic dinner, or a lively night with friends, we offer an atmosphere that's both sophisticated and welcoming. Our chefs craft each dish with precision and flair, blending bold flavors, fresh ingredients, and artistic presentation. From sizzling appetizers to decadent desserts, every bite is a gem.
+    </p>
+    <p>
+        Our bar is the heart of the energy—shaking, stirring, and pouring signature cocktails, premium spirits, and curated wines. Sip under ambient lighting, enjoy live music or DJ nights, and let your evenings shimmer with unforgettable moments.
     </p>
 
     <p class="animated-paragraph">
