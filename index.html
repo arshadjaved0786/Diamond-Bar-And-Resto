@@ -64,7 +64,6 @@
             text-shadow: 0 0 8px #000000;
         }
 
-        /* Logo inside body */
         .body-logo {
             display: flex;
             justify-content: center;
@@ -91,8 +90,7 @@
 
         h2 {
             text-align: center;
-            color:  #000000;
-            text-shadow: linear-gradient(135deg, #ffffff, #000000);
+            color: #000000;
         }
 
         .menu-category {
@@ -170,7 +168,7 @@
 
 <body>
 
-<<header style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
     <!-- Left: Logo -->
     <div style="flex: 1;">
         <img src="https://shorturl.at/4Stns" alt="Diamond Logo" style="height: 160px; width: 160px; border-radius: 50%; object-fit: cover;">
@@ -185,35 +183,37 @@
     <div style="flex: 1;"></div>
 </header>
 
+<nav>
+    <a href="index.html">Home</a> |
+    <a href="Menu.html">Menu</a> |
+    <a href="contact.html">Contact Us</a> |
+    <a href="#" onclick="logout()">Logout</a>
+</nav>
 
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="Menu.html">Menu</a> |
-        <a href="contact.html">Contact Us</a>
-    </nav>
+<section id="contentSection">
+    <h2 class="animated-3d-text" style="font-size: 30px; font-weight: bold; text-align: center;">WELCOME TO DIAMOND RESTRO & BAR</h2>
+    WELCOME TO DIAMOND RESTRO & BAR
+    At Diamond Restro & Bar, we bring sparkle to every plate and pour. Since opening in 2023, we’ve been serving a perfect fusion of gourmet dining and vibrant bar vibes.
 
-    <section id="contentSection">
+    Whether you're here for a casual evening out, a romantic dinner, or a lively night with friends, we offer an atmosphere that's both sophisticated and welcoming. Our chefs craft each dish with precision and flair, blending bold flavors, fresh ingredients, and artistic presentation. From sizzling appetizers to decadent desserts, every bite is a gem.
 
-         <h2 class="animated-3d-text" style="font-size: 30px; font-weight: bold; text-align: center;">WELCOME TO DIAMOND RESTRO & BAR</h2>
+    Our bar is the heart of the energy—shaking, stirring, and pouring signature cocktails, premium spirits, and curated wines. Sip under ambient lighting, enjoy live music or DJ nights, and let your evenings shimmer with unforgettable moments.
 
-         WELCOME TO DIAMOND RESTRO & BAR
-At Diamond Restro & Bar, we bring sparkle to every plate and pour. Since opening in 2023, we’ve been serving a perfect fusion of gourmet dining and vibrant bar vibes.
+    <p>
+        At <strong>Diamond Restro & Bar</strong>
+    </p>
 
-Whether you're here for a casual evening out, a romantic dinner, or a lively night with friends, we offer an atmosphere that's both sophisticated and welcoming. Our chefs craft each dish with precision and flair, blending bold flavors, fresh ingredients, and artistic presentation. From sizzling appetizers to decadent desserts, every bite is a gem.
+    <p class="animated-paragraph">
+        Join us for a dining experience that blends bold flavors with cozy elegance — only at <strong>Diamond Restro & Bar</strong>.
+    </p>
+</section>
 
-Our bar is the heart of the energy—shaking, stirring, and pouring signature cocktails, premium spirits, and curated wines. Sip under ambient lighting, enjoy live music or DJ nights, and let your evenings shimmer with unforgettable moments.
-        <p>
-            At <strong>Diamond Restro & Bar</strong>
-        </p>
+<script>
+    function logout() {
+        localStorage.removeItem("isLoggedIn");
+        window.location.href = "login.html";
+    }
+</script>
 
-       
-            
-
-        <p class="animated-paragraph">
-            Join us for a dining experience that blends bold flavors with cozy elegance — only at <strong>Diamond Restro & Bar</strong>.
-        </p>
-    </section>
 </body>
-
 </html>
-
