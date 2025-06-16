@@ -233,17 +233,19 @@
     <h3>💖 Wishlist</h3>
     <ul id="wishlist-list"></ul>
   </div>
-
-     <script>
+<script>
     const menuItems = [
-      { name: "Daal Tadka", half: 90, full: 150, img: "https://media.istockphoto.com/id/1205482038/photo/dal-tadka-cooked-lentils-which-are-lastly-tempered-with-oil-or-ghee-fried-spices-herbs.jpg?s=612x612&w=0&k=20&c=mQ-ECflpl5ppQM-124QrQi-DDyrKsSnX36GpIyMjB3A=" },
+     { name: "Daal Tadka", half: 90, full: 150, img: "https://media.istockphoto.com/id/1205482038/photo/dal-tadka-cooked-lentils-which-are-lastly-tempered-with-oil-or-ghee-fried-spices-herbs.jpg?s=612x612&w=0&k=20&c=mQ-ECflpl5ppQM-124QrQi-DDyrKsSnX36GpIyMjB3A=" },
       { name: "Mix Veg", half: 100, full: 170, img: "https://media.istockphoto.com/id/1278584340/photo/veg-kolhapuri-in-black-bowl-isolated-on-white-indian-vegetable-curry-dish-vegetarian-asian.jpg?s=612x612&w=0&k=20&c=kvtH77HhYdGuN5LauzRrOzMmFX2juyWDHliLaGseuPc=" },
-      { name: "Soya Chaap", half: 110, full: 190, img: "https://www.google.com/search?q=soyachap+image&oq=soyachap+image&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQABgNGIAEMgkIAhAAGA0YgAQyCQgDEAAYDRiABDIICAQQABgWGB4yCggFEAAYChgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB4yCAgJEAAYFhge0gEKMTMyMjlqMGoxNagCCbACAfEFUBlJM5cFAHc&sourceid=chrome&ie=UTF-8#vhid=_DrClOWBZd6_8M&vssid=_hB9AaJWbEfa74-EP36_1wQ0_82" },
-      { name: "Paneer Masala", half: 120, full: 210, img: "https://media.istockphoto.com/id/1327490770/photo/indian-paneer-masala-curry-with-paneer-cheese-and-spices.jpg?s=612x612&w=0&k=20&c=YCVmtANRpK2H3nEZ6EpAi_RkRI0J7Cz5tNZXv3VUl3A=" },
-      { name: "Malai Kofta", half: 130, full: 220, img: "https://media.istockphoto.com/id/488325774/photo/malai-kofta.jpg?s=612x612&w=0&k=20&c=nnvQKTyOMzrqpue7XEOzYBfTC_1iHpY2qyWzTk3C9Xk=" },
-      { name: "Paneer Butter Masala", half: 140, full: 230, img: "https://media.istockphoto.com/id/478933468/photo/paneer-butter-masala.jpg?s=612x612&w=0&k=20&c=XpIFz8xr-cQmghzT_iq7i6rC9xckhBh9wXzxbFXPUbo=" },
-      { name: "Tandoori Roti", half: 20, full: 40, img: "https://media.istockphoto.com/id/529373548/photo/roti-roasted-indian-bread.jpg?s=612x612&w=0&k=20&c=vJXPZxA-PWikcS27oiOxTgD04EhT0a9WY3LsJJMPOI8=" }
+      { name: "Soya Chaap", half: 110, full: 190, img: "https://media.istockphoto.com/id/1450264005/photo/soya-chaap-curry.jpg?s=612x612&w=0&k=20&c=9M3RbQ_WXQF9hM1QD0BhgCPiI4SYDwNDaEGrcOubIGY=" },
+      { name: "Matar Paneer", half: 120, full: 200, img: "https://media.istockphoto.com/id/1078081328/photo/green-peas-or-matar-paneer-curry-recipe-served-in-a-bowl-selective-focus.jpg?s=612x612&w=0&k=20&c=2zrBYS8skb8jdgk-8HTFqxOUd1HBSC9Mre2DUCPxyXw=" },
+      { name: "Kadhai Paneer", half: 130, full: 220, img: "https://t3.ftcdn.net/jpg/08/07/69/64/240_F_807696493_g346DAR2XbMqstBqAQmK7XS3leNGIFQ2.jpg" },
+      { name: "Paneer Butter Masala", half: 140, full: 240, img: "https://t4.ftcdn.net/jpg/08/97/78/97/240_F_897789740_YnqOC7bWf4nKzEjUn45DkmRqo11fCyXR.jpg" },
+      { name: "Paneer Lababdar", half: 150, full: 250, img: "https://t4.ftcdn.net/jpg/01/70/87/83/240_F_170878391_ffaozIJICSdQb6Nl66tTD7rUJShrQpQv.jpg" },
+      { name: "Rajma Rice Bowl", half: 90, full: 160, img:"https://t4.ftcdn.net/jpg/09/57/46/33/240_F_957463328_KDyf8xUhy9zTKVrJ7kWvrupGTdBZyEWK.jpg" },
+      { name: "Chhole Rice Bowl", half: 90, full: 160, img: "https://t3.ftcdn.net/jpg/09/43/24/18/240_F_943241866_TlMjwkseVA4maP3iGEDHmbmFu5EA0qD4.jpg" }
     ];
+ 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
