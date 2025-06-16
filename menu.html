@@ -136,20 +136,23 @@
   </style>
 </head>
 <body>
-  <header style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
+<header>
     <!-- Left: Logo -->
-    <div style="flex: 1;">
-        <img src="https://shorturl.at/4Stns" alt="Diamond Logo" style="height: 160px; width: 160px; border-radius: 50%; object-fit: cover;">
+    <div style="flex: 1; display: flex; align-items: center;">
+        <img src="https://shorturl.at/4Stns" alt="Diamond Logo">
     </div>
 
     <!-- Center: Heading -->
     <div style="flex: 1; text-align: center;">
-        <h1 style="margin: 0; white-space: nowrap; font-size: 55px;">DIAMOND RESTRO AND BAR</h1>
+        <h1>DIAMOND RESTRO AND BAR</h1>
     </div>
 
-    <!-- Right: Empty to balance layout -->
-    <div style="flex: 1;"></div>
-  </header>
+    <!-- Right: Logout Button -->
+    <div style="flex: 1; display: flex; justify-content: flex-end; align-items: center;">
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+</header>
+
 
   <nav>
     <a href="index.html">🏠 Home</a>
